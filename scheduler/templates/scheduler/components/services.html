@@ -1,0 +1,63 @@
+<section id="services" class="my-5">
+
+<h2 class="text-center mb-5">
+    Our Services
+</h2>
+
+<div class="row">
+
+{% for service in services %}
+
+<div class="col-lg-4 col-md-6 mb-4">
+
+    <div class="card shadow h-100">
+
+        <div class="card-body text-center">
+
+            {% if "Cloud" in service.name %}
+
+<i class="bi bi-cloud-fill display-3 text-primary"></i>
+
+{% elif "Docker" in service.name %}
+
+<i class="bi bi-box-seam display-3 text-info"></i>
+
+{% elif "CI/CD" in service.name %}
+
+<i class="bi bi-rocket-takeoff-fill display-3 text-danger"></i>
+
+{% else %}
+
+<i class="bi bi-server display-3 text-secondary"></i>
+
+{% endif %}
+
+            <h4 class="mt-4">
+                {{ service.name }}
+            </h4>
+
+            <p class="text-muted">
+                {{ service.description }}
+            </p>
+
+            <span class="badge bg-primary">
+                {{ service.duration }} Minutes
+            </span>
+
+            <div class="mt-4">
+                <a href="#booking" class="btn btn-outline-primary">
+                    Book Now
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>

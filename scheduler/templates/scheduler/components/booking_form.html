@@ -1,0 +1,93 @@
+<section id="booking" class="my-5">
+
+    <div class="card shadow-lg border-0">
+
+        <div class="card-header bg-primary text-white text-center py-4">
+
+            <h2 class="mb-0">
+                Schedule a Consultation
+            </h2>
+
+            <small>
+                Tell us about your deployment needs.
+            </small>
+
+        </div>
+
+        <div class="card-body p-4">
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label fw-bold">
+                            Name
+                        </label>
+
+                        {{ form.client_name }}
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label fw-bold">
+                            Email
+                        </label>
+
+                        {{ form.email }}
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label fw-bold">
+                            Service
+                        </label>
+
+                        {{ form.service }}
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label fw-bold">
+                            Appointment Date
+                        </label>
+
+                        {{ form.appointment_date }}
+
+                    </div>
+
+                    <div class="col-12 mb-4">
+
+                        <label class="form-label fw-bold">
+                            Additional Notes
+                        </label>
+
+                        {{ form.notes }}
+
+                    </div>
+
+                    <div class="col-12">
+
+                        <button class="btn btn-success btn-lg w-100">
+
+                            🚀 Schedule Appointment
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
